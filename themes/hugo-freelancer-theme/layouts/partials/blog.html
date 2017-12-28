@@ -1,0 +1,22 @@
+{{ "<!-- Blog Section -->" | safeHTML }}
+<section class="" id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>{{ with .Site.Params.blog.title }}{{.}}{{ end }}</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+   <!-- <div class="row">
+         <div class="col-lg-8 col-lg-offset-2 text-center">
+            <p>{{ with .Site.Params.about.content }}{{ . | markdownify }}{{ end }}</p>
+        </div>
+       
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <a href="{{ with .Site.Params.about.button.link }}{{.}}{{ end }}" class="btn btn-lg btn-outline">
+                    <i class="fa fa-{{ with .Site.Params.about.button.icon }}{{.}}{{end}}"></i> {{ with .Site.Params.about.button.text }}{{ . }}{{ end }}
+                </a>
+            </div>
+        </div> -->
+    </div>
+</section>
