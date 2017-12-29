@@ -1,3 +1,5 @@
+{{ if isset .Site.Params "portfolio" }}
+{{ if .Site.Params.portfolio.enable }}
 {{ "<!-- Portfolio Grid Section -->" | safeHTML }}
 <section class="portfolio" id="portfolio">
     <div class="container">
@@ -23,3 +25,5 @@
         </div>
     </div>
 </section>
+{{ end }}
+{{ end }}

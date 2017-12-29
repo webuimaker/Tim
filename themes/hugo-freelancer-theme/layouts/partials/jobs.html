@@ -1,3 +1,6 @@
+{{ if isset .Site.Params "jobs" }}
+{{ if .Site.Params.jobs.enable }}
+
 {{ "<!-- Blog Section -->" | safeHTML }}
 <section class="portfolio" id="jobs">
     <div class="container">
@@ -40,3 +43,5 @@
 		</div>
     </div>
 </section>
+{{ end }}
+{{ end }}
