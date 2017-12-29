@@ -1,0 +1,31 @@
+{{ "<!-- Blog Section -->" | safeHTML }}
+<section class="" id="jobs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>{{ with .Site.Params.jobs.title }}{{.}}{{ end }}</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+		<div class="row">
+			{{ range $.Site.Data.jobs }}
+			<div class="col-sm-4 col-md-4">
+				<div class="box-image-text  same-height"> 
+				  <div class="top">
+					<a href="#jobsModal{{ .modalID }}" data-toggle="modal">
+					  <div class="image"><img src="img/portfolio/{{ .jobImg }}" class="img-responsive"></div>
+					  <div class="bg"></div>
+					</a>
+					</div>
+				  <div class="content">
+					<h5><a href="#jobsModal{{ .modalID }}" data-toggle="modal">{{ .title }}</a></h5>
+					<p class="featured__details">  <i class="fa fa-map-marker job__location"></i>{{ .location }}</p>
+					<p>{{ .jobSummary  | safeHTML | truncate 140 }}</p>
+				  </div>
+				</div>
+			</div>
+		{{ end }}
+		
+		</div>
+    </div>
+</section>
