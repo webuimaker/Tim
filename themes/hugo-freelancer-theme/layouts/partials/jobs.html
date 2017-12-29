@@ -1,5 +1,5 @@
 {{ "<!-- Blog Section -->" | safeHTML }}
-<section class="" id="jobs">
+<section class="portfolio" id="jobs">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -9,6 +9,17 @@
         </div>
 		<div class="row">
 			{{ range $.Site.Data.jobs }}
+			 <div class="col-sm-4 portfolio-item">
+                <a href="#jobsModal{{ .modalID }}" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/jobs/{{ .jobImg }}" class="img-responsive">
+                </a>
+            </div>
+			<!--
 			<div class="col-sm-4 col-md-4">
 				<div class="box-image-text  same-height"> 
 				  <div class="top">
@@ -23,7 +34,7 @@
 					<p>{{ .jobSummary  | safeHTML | truncate 140 }}</p>
 				  </div>
 				</div>
-			</div>
+			</div> -->
 		{{ end }}
 		
 		</div>
